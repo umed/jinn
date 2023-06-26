@@ -27,8 +27,9 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/bin)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+include(vendor/dependencies.cmake)
+
 add_subdirectory(src)
-add_subdirectory(vendor)
 
 # include(CTest)
 # if(BUILD_TESTING)
