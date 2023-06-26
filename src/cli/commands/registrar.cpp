@@ -1,6 +1,6 @@
 #include "registrar.hpp"
 
-#include "init.hpp"
+#include "new_command.hpp"
 
 namespace jinn::cli::commands {
 

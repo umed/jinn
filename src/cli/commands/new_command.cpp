@@ -1,4 +1,4 @@
-#include "init.hpp"
+#include "new_command.hpp"
 
 #include <core/project.hpp>
 

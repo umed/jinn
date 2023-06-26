@@ -26,4 +26,5 @@ include(FetchContent)
 
 AddExternalProject(cli11 2.3.2 https://github.com/CLIUtils/CLI11 v2.3.1)
 AddExternalProject(fmt 10.0.0 https://github.com/fmtlib/fmt 10.0.0)
+AddExternalProject(fswatch 1.17.1 https://github.com/emcrisostomo/fswatch 1.17.1)
 AddExternalProject(tomlplusplus 3.3.0 https://github.com/marzer/tomlplusplus v3.3.0)
