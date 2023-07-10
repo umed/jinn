@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <string_view>
 #include <vector>
 
 namespace jinn::core {
@@ -18,6 +19,7 @@ struct Project {
 
     std::vector<std::string> authors;
 
+    static Project load(std::string_view path);
     void dump() const;
 };
 

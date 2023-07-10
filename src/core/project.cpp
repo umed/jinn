@@ -2,6 +2,7 @@
 
 #include <core/project_errors.hpp>
 
+#include <toml++/impl/parser.h>
 #include <toml++/toml.h>
 
 #include <filesystem>
@@ -20,6 +21,16 @@ void FailIfProjectExists()
     if (IsProjectFileExists()) {
         throw ProjectExistsError {};
     }
+}
+
+Project Project::load(std::string_view path)
+{
+    auto table = toml::parse(path);
+    auto projectTable = table["project"];
+    return Project {
+        .name = projectTable["name"].value_or<std::string>(""),
+        .version = table["project"].value_or<std::string>("0.0.1"),
+    };
 }
 
 void Project::dump() const

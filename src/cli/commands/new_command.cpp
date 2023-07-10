@@ -33,7 +33,7 @@ void NewCommand::execute()
 
 base::CommandPtr createNewCommand(CLI::App* app)
 {
-    return std::make_unique<NewCommand>(app);
+    return std::make_shared<NewCommand>(makeApp("new", "creat new project"));
 }
 
 } // namespace jinn::cli::commands

@@ -4,6 +4,6 @@
 
 namespace jinn::cli::commands {
 
-base::CommandPtr createNewCommand(CLI::App* app);
+base::CommandPtr createBuildCommand(CLI::App* app);
 
 } // namespace jinn::cli::commands

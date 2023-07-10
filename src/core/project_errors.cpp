@@ -12,5 +12,6 @@ ProjectExistsError::ProjectExistsError()
     : std::runtime_error(fmt::format("{} already exists\n", ProjectFileName))
 {
 }
-
+NoProjectError::NoProjectError()
+    : std::runtime_error(fmt::format("No project file"));
 } // namespace jinn::core
